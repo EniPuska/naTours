@@ -1,0 +1,28 @@
+.row {
+    max-width: $gridWidth;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $gutterVertical;
+    }
+
+    @include clearFix;
+
+    [class^="col-"] {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutterHorizontal;
+        }
+
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutterHorizontal}) / 2);
+        
+    }
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutterHorizontal}) / 3);
+        
+    }
+}
