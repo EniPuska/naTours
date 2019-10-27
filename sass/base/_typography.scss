@@ -49,3 +49,17 @@ body {
 
 }
 
+.headingTertiary {
+    font-size: $defaultFontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $defaultFontSize;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+
