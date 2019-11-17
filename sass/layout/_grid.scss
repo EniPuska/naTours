@@ -25,4 +25,9 @@
         width: calc((100% - 2 * #{$gutterHorizontal}) / 3);
         
     }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutterHorizontal}) / 4);
+        
+    }
 }
