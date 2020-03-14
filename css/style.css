@@ -90,6 +90,9 @@ body {
 .uMarginBottomSmall {
   margin-bottom: 1.5rem; }
 
+.uMarginTopHuge {
+  margin-top: 10rem; }
+
 *,
 *::after,
 *::before {
@@ -126,6 +129,12 @@ html {
   color: #777; }
   .btn-white::after {
     background-color: #fff; }
+
+.btn-green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn-green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -185,6 +194,10 @@ html {
       transform: rotateY(180deg); }
       .cardSideBack1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .cardSideBack2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .cardSideBack3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .cardSideFront {
     transform: rotateY(-180deg); }
   .card:hover .cardSideBack {
@@ -194,13 +207,15 @@ html {
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px; }
     .cardPicture1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
     .cardPicture2 {
-      background-image: url("../img/nat-5.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg"); }
     .cardPicture3 {
-      background-image: url("../img/nat-5.jpg"); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg"); }
   .cardHeading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -216,6 +231,10 @@ html {
     box-decoration-break: clone; }
     .cardHeadingSpan1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .cardHeadingSpan2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .cardHeadingSpan3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .cardDetails {
     padding: 3rem; }
     .cardDetails ul {
@@ -228,6 +247,23 @@ html {
         padding: 1rem; }
         .cardDetails ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .cardCta {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .cardPriceBox {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: #fff; }
+  .cardPriceOnly {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .cardPriceValue {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -331,5 +367,5 @@ html {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
