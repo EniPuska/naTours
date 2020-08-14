@@ -448,6 +448,44 @@ html {
 .formRadioInput:checked ~ .formRadioLabel .formRadioButton::after {
   opacity: 1; }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f7f7f7; }
+  .footerLogoBox {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footerLogo {
+    width: 15rem;
+    height: auto; }
+  .footerNavigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footerList {
+    list-style: none; }
+  .footerItem {
+    display: inline-block; }
+    .footerItem:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footerLink:link, .footerLink:visited {
+    color: #f7f7f7;
+    background-color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footerLink:hover, .footerLink:active {
+    color: #55c57a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3); }
+  .footerCopyright {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    width: 80%;
+    float: right; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
