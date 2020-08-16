@@ -13,6 +13,7 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
     }
 
     &Background {
@@ -24,22 +25,25 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-        transform: scale(80);
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &Nav {
         height: 100vh;
-        width: 100%;
+        width: 0;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500;
+        opacity: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     &List{
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 100%;
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
@@ -75,5 +79,14 @@
             color: $color-primary;
             transform: translateX(1rem);
         }
+    }
+
+    &CheckBox:checked ~ &Background {
+        transform: scale(80);
+    }
+
+    &CheckBox:checked ~ &Nav {
+        opacity: 1;
+        width: 100%;
     }
 }
