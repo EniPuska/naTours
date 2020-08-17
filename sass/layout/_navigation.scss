@@ -14,6 +14,8 @@
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
     }
 
     &Background {
@@ -88,5 +90,51 @@
     &CheckBox:checked ~ &Nav {
         opacity: 1;
         width: 100%;
+    }
+
+    &Icon {
+        position: relative;
+        margin-top: 3.5rem;
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            transition: all .2s;
+        }
+
+        &::before,
+        &::after {
+           content: "";
+           position: absolute;
+           left: 0;
+        }
+
+        &::before { top: -.8rem } 
+        &::after { top: .8rem }
+    }
+
+    &Button:hover &Icon::before {
+        top: -1rem;
+    }
+
+    &Button:hover &Icon::after {
+        top: 1rem;
+    }
+
+    &CheckBox:checked + &Button &Icon{
+        background-color: transparent;
+    }
+
+    &CheckBox:checked + &Button &Icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &CheckBox:checked + &Button &Icon::after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }
