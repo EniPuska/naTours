@@ -4,6 +4,15 @@
 
     &:not(:last-child) {
         margin-bottom: $gutterVertical;
+        @include respond(tabletPortrait) {
+            margin-bottom: $gutterVerticalSmall;
+        }
+        
+    }
+
+    @include respond(tabletPortrait) {
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 
     @include clearFix;
@@ -13,8 +22,16 @@
 
         &:not(:last-child) {
             margin-right: $gutterHorizontal;
+
+            @include respond(tabletPortrait) {
+                margin-right: 0;
+                margin-bottom: $gutterVerticalSmall;
+            }
         }
 
+        @include respond(tabletPortrait) {
+            width: 100% !important;
+        }
     }
 
     .col-1-of-2 {
