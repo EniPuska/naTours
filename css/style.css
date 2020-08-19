@@ -300,6 +300,35 @@ body {
   .cardPriceValue {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .cardSide {
+        height: auto;
+        transition: all .8s ease;
+        position: relative;
+        box-shadow: none; }
+        .cardSideBack {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+      .card:hover .cardSideFront {
+        transform: rotateY(0); }
+      .cardDetails {
+        padding: 1rem 3rem; }
+      .cardCta {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        padding: 7rem 4rem 4rem 4rem; }
+      .cardPriceBox {
+        margin-bottom: 3rem; }
+      .cardPriceValue {
+        font-size: 4rem; } }
 
 .story {
   width: 75%;
@@ -311,6 +340,14 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .storyShape {
     width: 15rem;
     height: 15rem;
@@ -321,12 +358,18 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .storyShape {
+        transform: translateX(-3rem) skewX(0); } }
   .storyImage {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden; }
   .storyText {
     transform: skewX(-12deg); }
+    @media (max-width: 37.5em) {
+      .storyText {
+        transform: skewX(0); } }
   .storyCaption {
     position: absolute;
     top: 50%;
@@ -444,8 +487,11 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 65%;
+  width: 90%;
   display: block; }
+  @media (max-width: 56.25em) {
+    .formInput {
+      width: 100%; } }
   .formInput::-webkit-input-placeholder {
     color: #999; }
   .formInput:focus {
@@ -471,6 +517,10 @@ body {
 .formRadioGroup {
   width: 39%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .formRadioGroup {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .formRadioInput {
   display: none; }
@@ -851,8 +901,20 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat-10.jpg); } }
   .bookForm {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .bookForm {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .bookForm {
+        width: 100%; } }

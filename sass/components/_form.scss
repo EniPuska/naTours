@@ -12,8 +12,12 @@
         background-color: rgba($color-white, .5);
         border: none;
         border-bottom: 3px solid transparent;
-        width: 65%;
+        width: 90%;
         display: block;
+
+        @include respond(tabletPortrait) {
+            width: 100%;
+        }
 
         &::-webkit-input-placeholder {
             color: $color-grey-dark-2
@@ -48,6 +52,11 @@
     &RadioGroup {
         width: 39%;
         display: inline-block;
+
+        @include respond(tabletPortrait) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &RadioInput {
