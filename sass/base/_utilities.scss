@@ -1,8 +1,20 @@
 .uCenterText { text-align: center !important; }
 
-.uMarginBottomBig { margin-bottom: 8rem !important; }
+.uMarginBottomBig { 
+    margin-bottom: 8rem !important; 
 
-.uMarginBottomMedium { margin-bottom: 4rem !important; }
+    @include respond(tabletPortrait) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+.uMarginBottomMedium { 
+    margin-bottom: 4rem !important; 
+
+    @include respond(tabletPortrait) {
+        margin-bottom: 3rem !important;
+    }
+}
 
 .uMarginBottomSmall { margin-bottom: 1.5rem !important; }
 
