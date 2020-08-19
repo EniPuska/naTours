@@ -312,7 +312,10 @@
         </main>
         <footer class = "footer">
             <div class="footerLogoBox">
-                <img src="img/logo-green-2x.png" alt="Full Logo" class="footerLogo">
+                <picture class="footerLogo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media = "(max-width: 37.5em)">   
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo">
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -341,7 +344,7 @@
                    <img src="img/nat-9.jpg" alt="Tour photo" class = "popupImage">
                </div>
                <div class="popupRight">
-                   <a href="#sectionTours" class="popupClose">&times;</a>
+                    <a href="#sectionTours" class="popupClose">&times;</a>
                     <h2 class="headingSecondary uMarginBottomSmall">Start booking now</h2>
                     <h3 class="headingTertiary uMarginBottomSmall">Important &ndash; Please read these terms before booking</h3>
                     <p class="popupText">Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.</p>
