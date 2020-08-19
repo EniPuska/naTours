@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/EniPuska/naTours.git"
   },
-  "author": "Eni Puska",
+  "author": "Eni Puska", 
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EniPuska/naTours/issues"
